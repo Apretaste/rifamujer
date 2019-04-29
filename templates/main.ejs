@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col s12">
+        <div class="col s12">
+
+            <h1 id="noMarg2">Rifa Especial Para Mujeres</h1>
+            <div id="space"></div>
+
+            <div id="noMarg" class="card-panel">
+
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h3 class="header"><i>BASES DEL CONCURSO</i></h3>
+                        <p><i>Para participar en esta Grandiosa Rifa, solo debes contestar la encuesta que está dirigida
+                                específicamente para el público femenino e inmediatamente lo estarás haciendo</i></p>
+                    </div>
+                    <% if(checkSurvey!=true){ %>
+                    <a id="tag2" class="waves-effect waves-light btn-small" onclick="status()"><i
+                            class="material-icons right">brightness_5</i>No participa</a>
+                    <a href="#!" class="b hide" id="target"></a>
+                    <% } else{ %>
+                    <a id="tag" class="waves-effect waves-light btn-small" onclick="status()"><i
+                            class="material-icons right">brightness_5</i>Participando</a>
+                    <a href="#!" class="a hide" id="target"></a>
+                    <% } %>
+                </div>
+            </div>
+            <div id="space"></div>
+        </div>
+
+        <div class="col s12">
+            <div id="noMarg" class="card-panel">
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h3 class="header">PRIMER PREMIO</h3>
+                        <p><br></br>Un paquete que incluye una OLLA ARROCERA y un perfume Isa Rose, ULRIC DE VARENS.</p>
+                    </div>
+                    <div class="card-image">
+                        <img class="responsive-img" src="{{APP_SERVICE_PATH}}/images/<%=img%>">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <div id="noPad" class="col s12 parallax-container">
+                <div id="noPad" class="parallax">
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6">
+            <div id="noMarg" class="card-panel">
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h4 class="header">SEGUNDO PREMIO</h4>
+                        <p>Una Línea Celular de Cubacel</p>
+                    </div>
+                    <div class="card-image">
+                        <img class="responsive-img" src="{{APP_SERVICE_PATH}}/images/<%=img2%>">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s6">
+            <div id="noMarg" class="card-panel">
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h4 class="header">TERCER PREMIO</h4>
+                        <p>Una Recarga a su celular de 10CUC.</p>
+                    </div>
+                    <div class="card-image">
+                        <img class="responsive-img" src="{{APP_SERVICE_PATH}}/images/<%=img3%>">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
