@@ -1,81 +1,79 @@
 <div class="row">
-    <div class="col s12">
-        <div class="col s12">
+	<div class="col s12">
+		<h1>Rifa especial</h1>
+		<% if(isFemale && isSurvey) { %>
+			<p class="message success">¡Gracias! Usted está participando en la rifa especial. No tiene que hacer nada por ahora. El Domingo 12 de Mayo le dejaremos saber por email si ha ganado.</p>
+		<% } else { %>
+			<p class="message danger">Usted aún no está participando en la rifa especial</p>
+		<% } %>
 
-            <h1 id="noMarg2">Rifa Especial Para Mujeres</h1>
-            <div id="space"></div>
+		<h2>Requerimientos</h2>
+		<p>Para participar en esta Rifa especial, debes cumplir dos requerimientos: 1) Ser mujer y 2) Contestar nuestra encuesta dirigida para el público femenino.</p>
 
-            <div id="noMarg" class="card-panel">
+		<ul class="collection">
+			<li class="collection-item avatar">
+				<i class="material-icons circle <%= isFemale ? 'green' : 'red' %>"><%=  isFemale ? 'check' : 'clear'  %></i>
+				<span class="title"><b>Ser mujer</b></span>
+				<p>
+					Esta rifa especial se ofrece solo para mujeres
+					<% if( ! isFemale) { %>
+						<br>Puedes definir tu sexo en <a href="#!" onclick="apretaste.send({'command':'PERFIL EDITAR'})">tu perfil</a>
+					<% } %>
+				</p>
+			</li>
+			<li class="collection-item avatar">
+				<i class="material-icons circle <%= isSurvey ? 'green' : 'red' %>"><%=  isSurvey ? 'check' : 'clear'  %></i>
+				<span class="title"><b>Contestar nuestra encuesta</b></span>
+				<p>
+					Muéstranos como piensan las Cubanas y gana §3
+					<% if( ! isSurvey) { %>
+						<br><a href="#!" onclick="apretaste.send({'command':'ENCUESTA'})">Responde la encuesta</a> para participar.
+					<% } %>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
 
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h3 class="header"><i>BASES DEL CONCURSO</i></h3>
-                        <p><i>Para participar en esta Grandiosa Rifa, solo debes contestar la encuesta que está dirigida
-                                específicamente para el público femenino e inmediatamente lo estarás haciendo</i></p>
-                    </div>
-                    <% if(checkSurvey!=true){ %>
-                    <a id="tag2" class="waves-effect waves-light btn-small" onclick="status()"><i
-                            class="material-icons right">brightness_5</i>No participa</a>
-                    <a href="#!" class="b hide" id="target"></a>
-                    <% } else{ %>
-                    <a id="tag" class="waves-effect waves-light btn-small" onclick="status()"><i
-                            class="material-icons right">brightness_5</i>Participando</a>
-                    <a href="#!" class="a hide" id="target"></a>
-                    <% } %>
-                </div>
-            </div>
-            <div id="space"></div>
-        </div>
+<div class="row">
+	<div class="col s12">
+		<h2>Premios</h2>
+		<p>Una vez que llene su perfil indicando que es mujer, y contente nuestra última encuesta, se encontrará automáticamente participando en la rifa especial. El <b>Domingo 12 de Mayo a las 11:59 PM</b> cerrará la rifa especial, se sacarán las tres ganadoras aleatoreamente, y se les dejará saber mediante email.</p>
+	</div>
 
-        <div class="col s12">
-            <div id="noMarg" class="card-panel">
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h3 class="header">PRIMER PREMIO</h3>
-                        <p><br></br>Un paquete que incluye una OLLA ARROCERA y un perfume Isa Rose, ULRIC DE VARENS.</p>
-                    </div>
-                    <div class="card-image">
-                        <img class="responsive-img" src="{{APP_SERVICE_PATH}}/images/<%=img%>">
-                    </div>
-                </div>
-            </div>
-        </div>
+	<div class="col m4 s12">
+		<div class="card">
+			<div class="card-image">
+				<img src="{{APP_SERVICE_PATH}}/images/1.jpg"/>
+				<span class="card-title yellow black-text"><b>#1</b></span>
+			</div>
+			<div class="card-content">
+				<p>Una olla arrocera y un perfume Ulric de Varens</p>
+			</div>
+		</div>
+	</div>
 
-        <div class="col s12">
-            <div id="noPad" class="col s12 parallax-container">
-                <div id="noPad" class="parallax">
-    
-                </div>
-            </div>
-        </div>
+	<div class="col m4 s12">
+		<div class="card">
+			<div class="card-image">
+				<img src="{{APP_SERVICE_PATH}}/images/2.jpg"/>
+				<span class="card-title yellow black-text"><b>#2</b></span>
+			</div>
+			<div class="card-content">
+				<p>Una línea celular de Cubacel, lista para ser usada</p>
+			</div>
+		</div>
+	</div>
 
-        <div class="col s6">
-            <div id="noMarg" class="card-panel">
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h4 class="header">SEGUNDO PREMIO</h4>
-                        <p>Una Línea Celular de Cubacel</p>
-                    </div>
-                    <div class="card-image">
-                        <img class="responsive-img" src="{{APP_SERVICE_PATH}}/images/<%=img2%>">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s6">
-            <div id="noMarg" class="card-panel">
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h4 class="header">TERCER PREMIO</h4>
-                        <p>Una Recarga a su celular de 10CUC.</p>
-                    </div>
-                    <div class="card-image">
-                        <img class="responsive-img" src="{{APP_SERVICE_PATH}}/images/<%=img3%>">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+	<div class="col m4 s12">
+		<div class="card">
+			<div class="card-image">
+				<img src="{{APP_SERVICE_PATH}}/images/3.jpg"/>
+				<span class="card-title yellow black-text"><b>#3</b></span>
+			</div>
+			<div class="card-content">
+				<p>Una recarga de 10 CUC, ya sea Cubacel o Nauta</p>
+			</div>
+		</div>
+	</div>
 </div>
